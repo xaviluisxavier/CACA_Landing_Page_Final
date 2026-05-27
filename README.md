@@ -176,8 +176,28 @@ Lê os eventos do IndexedDB e para cada um cria um cartão com:
 ### `News.jsx`
 Procura notícias de saúde em português via `/api/noticias` (proxy para GNews). Inclui um filtro de deduplicação que remove artigos com títulos muito semelhantes.
 
+### `ResearchAreas.jsx`
+Apresenta as 5 áreas de investigação do CACA em cartões coloridos: e-Saúde, Inteligência Artificial, Telemedicina, Epidemiologia Regional e Saúde Pública. Cada cartão tem ícone, título e descrição. A secção está inicialmente oculta e é revelada pelo botão "Conheça as Nossas Áreas" do Hero.
+
+### `Partners.jsx`
+Grelha estática com os 5 parceiros institucionais do CACA: Universidade dos Açores, Hospital Regional dos Açores, Governo Regional dos Açores, Centros de Investigação e Parceiros Internacionais. Cada parceiro tem um ícone e nome.
+
+### `Opportunities.jsx`
+Apresenta 4 tipos de oportunidades em cartões (Estágios, Projetos de Investigação, Teses/Dissertações e Bolsas de Investigação) e integra logo abaixo o componente `ChartOportunidades` com o gráfico histórico de oportunidades.
+
 ### `ChartOportunidades.jsx`
 Gráfico de barras animado feito com D3.js mostrando o crescimento de oportunidades ao longo dos anos. Inclui tooltip interativo.
+
+### `Contact.jsx`
+O componente mais complexo da landing page — contém duas secções distintas:
+ 
+**Secção de Contacto:**
+- Mapa Leaflet fixo centrado em Ponta Delgada (coordenadas da sede do CACA).
+- Informações de contacto estáticas (email, telefone, morada).
+- Formulário com validação em tempo real para nome (mín. 3 caracteres), email (aceita apenas domínios `@uac.pt`, `@gmail.com`, `@outlook.com`), telefone com indicativo de país (🇵🇹 +351, 🇧🇷 +55, 🇪🇸 +34) com regras diferentes por país, morada (opcional) e assunto (dropdown). Ao selecionar o assunto, a caixa de mensagem é pré-preenchida automaticamente com uma mensagem-padrão correspondente. Os campos ficam a verde quando válidos e a vermelho com mensagem de erro quando inválidos.
+**Secção de Newsletter:**
+- Formulário simples com nome e email (mesmas regras de validação).
+- Ao submeter, guarda o email no IndexedDB via `salvarSubscritor()`. Se o email já existir, mostra um erro.
 
 ### `logo-3d.jsx`
 Renderiza o logótipo do CACA num canvas Three.js com rotação contínua no eixo Y. Integrado no cabeçalho.
