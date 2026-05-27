@@ -1,0 +1,59 @@
+/* Media Queries para a Dashboard */
+
+@media (max-width: 960px) {
+    /* Faz com que o formulário e a lista fiquem um por cima do outro */
+    .admin-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* Remove o 'sticky' para o formulário não flutuar sobre a lista no telemóvel */
+    .form-panel {
+        position: static !important;
+        width: 100%;
+    }
+}
+
+@media (max-width: 680px) {
+    /* Força as linhas duplas (Data/Hora) a ficarem em uma única coluna */
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 1.1rem;
+    }
+
+    /* Ajusta os botões de ação para ocuparem a largura toda */
+    .form-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn-save, .btn-cancel {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    /* Ajusta o padding dos painéis para ganhar espaço nas margens */
+    .form-panel, .list-panel, .newsletter-panel {
+        padding: 1.5rem 1rem !important;
+    }
+
+    /* Ajusta o cabeçalho do admin para não cortar o texto */
+    .admin-header-content {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .admin-header-left {
+        border-right: none !important;
+        padding-right: 0 !important;
+        margin-bottom: 0.5rem;
+    }
+
+    .admin-header-right {
+        padding-left: 0 !important;
+        justify-content: center;
+        width: 100%;
+    }
+}
