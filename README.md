@@ -189,8 +189,7 @@ Apresenta 4 tipos de oportunidades em cartões (Estágios, Projetos de Investiga
 Gráfico de barras animado feito com D3.js mostrando o crescimento de oportunidades ao longo dos anos. Inclui tooltip interativo.
 
 ### `Contact.jsx`
-O componente mais complexo da landing page — contém duas secções distintas:
- 
+
 **Secção de Contacto:**
 - Mapa Leaflet fixo centrado em Ponta Delgada (coordenadas da sede do CACA).
 - Informações de contacto estáticas (email, telefone, morada).
