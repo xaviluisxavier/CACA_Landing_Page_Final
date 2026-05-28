@@ -191,7 +191,7 @@
 
 /* Newsletter */
 .newsletter-wrapper {
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: var(--color-white);
     border: 1px solid rgba(0,0,0,0.05);
@@ -199,6 +199,16 @@
     padding: var(--spacing-lg);
     box-shadow: var(--shadow-soft);
     transition: var(--transition);
+}
+
+.newsletter-section {
+    background-color: var(--color-off-white);
+    padding: 60px 0;
+}
+
+.newsletter-submit-btn {
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
 .newsletter-wrapper:hover,
@@ -219,6 +229,20 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
     gap: var(--spacing-md);
+}
+
+.noticias-section {
+    background-color: var(--color-off-white);
+}
+
+.noticias-status {
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+.noticias-status.error {
+    color: #dc2626; 
 }
 
 .noticia-card {
