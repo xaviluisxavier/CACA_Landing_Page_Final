@@ -5,14 +5,12 @@ export default function News() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Função para remover notícias com o mesmo assunto 
     const filtrarNoticiasSemelhantes = (artigos) => {
         if (!artigos || artigos.length === 0) return [];
         const unicos = [];
 
         for (const artigo of artigos) {
             let Duplicado = false;
-            // Limpa o título e divide em palavras
             const palavrasArtigo = artigo.title.toLowerCase().replace(/[^\w\sà-ú]/gi, '').split(/\s+/).filter(w => w.length > 3);
 
             for (const noticiaUnica of unicos) {
@@ -34,13 +32,12 @@ export default function News() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                // Chamada para a rota servidor Node.js
                 const response = await fetch('/api/noticias');
                 const data = await response.json();
                 
                 if (data.items) {
                     const filtradas = filtrarNoticiasSemelhantes(data.items);
-                    setArticles(filtradas.slice(0, 3)); // Mostra apenas as 3 primeiras após o filtro
+                    setArticles(filtradas.slice(0, 3)); 
                 } else {
                     throw new Error("Formato de dados inválido");
                 }
@@ -56,7 +53,7 @@ export default function News() {
     }, []);
 
     return (
-        <section id="noticias" className="noticias-section" style={{ backgroundColor: 'var(--color-off-white)' }}>
+        <section id="noticias" className="noticias-section">
             <div className="container">
                 <header className="section-header">
                     <h2 className="section-title">Notícias de Saúde</h2>
@@ -64,9 +61,9 @@ export default function News() {
                 </header>
                 
                 <div id="noticiasGrid" className="noticias-grid">
-                    {loading && <p style={{ textAlign: 'center', width: '100%' }}>A carregar notícias de saúde...</p>}
+                    {loading && <p className="noticias-status">A carregar notícias de saúde...</p>}
                     
-                    {error && <p style={{ textAlign: 'center', width: '100%', color: 'red' }}>{error}</p>}
+                    {error && <p className="noticias-status error">{error}</p>}
                     
                     {!loading && !error && articles.map((item, index) => (
                         <article key={index} className="noticia-card">
