@@ -4,6 +4,14 @@ Site institucional com painel de administração para o Centro Académico Clíni
 
 ---
 
+## Identificação do Grupo
+**Projeto de Equipa (PE) - Tecnologias Web 2025/2026 | Grupo 6**
+
+* **Aluno 1:** Luis Xavier da Silva Pacheco - 2024114400
+* **Aluno 2:** António Rui Serpa Reis - 2022113330
+* **Aluno 3:** Tomás Raposo Pacheco - 2024111792
+* **Aluno 4:** Miguel Sousa Cordeiro - 20162547
+
 ## Índice
 
 - [Visão Geral](#visão-geral)
