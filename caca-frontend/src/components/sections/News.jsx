@@ -34,13 +34,13 @@ export default function News() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                // Chamada para a rota do teu servidor Node.js
+                // Chamada para a rota servidor Node.js
                 const response = await fetch('/api/noticias');
                 const data = await response.json();
                 
                 if (data.items) {
                     const filtradas = filtrarNoticiasSemelhantes(data.items);
-                    setArticles(filtradas.slice(0, 3)); // Mostramos apenas as 3 primeiras após o filtro
+                    setArticles(filtradas.slice(0, 3)); // Mostra apenas as 3 primeiras após o filtro
                 } else {
                     throw new Error("Formato de dados inválido");
                 }
