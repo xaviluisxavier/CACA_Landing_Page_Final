@@ -1,4 +1,3 @@
-// src/components/layout/Header.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo3D from '../ui/logo-3d';
