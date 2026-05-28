@@ -1,4 +1,3 @@
-// src/services/db.js
 const DB_NAME = 'CACA_DB';
 const DB_VERSION = 1;
 
@@ -111,17 +110,17 @@ export const salvarSubscritor = async (email) => {
         data: new Date().toLocaleDateString('pt-PT')
     };
 
-    // 4. Usa a tua função genérica para guardar no IndexedDB
+    // 4. Usa a função para guardar no IndexedDB
     await addRecord(STORE_NEWSLETTER, novoSubscritor);
     return novoSubscritor;
 };
 
 export const obterSubscritores = async () => {
-    // Usa a tua função genérica para ler a tabela da newsletter
+    // Usa a função genérica para ler a tabela da newsletter
     return await getAllRecords(STORE_NEWSLETTER);
 };
 
 export const removerSubscritor = async (id) => {
-    // Usa a tua função genérica para apagar pelo ID
+    // Usa a função genérica para apagar pelo ID
     return await deleteRecord(STORE_NEWSLETTER, id);
 };
