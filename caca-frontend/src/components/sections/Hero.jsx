@@ -51,7 +51,7 @@ export default function Hero() {
             de saúde regionais, dedicada à investigação clínica de excelência,
             ao ensino de qualidade e à melhoria dos cuidados de saúde nas ilhas.
           </p>
-          {/* Adicionamos o evento onClick aqui */}
+          {/* evento onClick */}
           <button type="button" className="btn cta-button" id="SaberMais" onClick={handleSaberMais}>
             Conheça as Nossas Áreas
           </button>
