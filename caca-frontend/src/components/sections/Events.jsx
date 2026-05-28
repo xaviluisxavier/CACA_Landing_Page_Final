@@ -20,7 +20,7 @@ function EventCard({ evento }) {
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapInstance);
             L.marker([evento.lat, evento.lng]).addTo(mapInstance).bindPopup(`<b>${evento.local}</b>`).openPopup();
             
-            // 2. Ir buscar a Meteorologia (OpenWeather via teu Backend)
+            // 2. Ir buscar a Meteorologia (OpenWeather via Backend)
             fetch(`/api/weather?lat=${evento.lat}&lon=${evento.lng}`)
                 .then(res => res.json())
                 .then(data => {
@@ -43,7 +43,6 @@ function EventCard({ evento }) {
     return (
         <article className="evento-card">
             <div className="evento-mapa-container">
-                {/* Onde o mapa vai ser desenhado */}
                 <div className="evento-mapa" ref={mapRef} style={{ height: '200px', width: '100%', background: '#eee' }}></div>
                 <div className="caca-date-badge">
                     <div className="d-day">{dia}</div>
