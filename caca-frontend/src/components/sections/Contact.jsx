@@ -126,7 +126,7 @@ export default function Contact() {
                                 </address>
                             </div>
                             
-                            <div id="contact-map" className="contact-map" ref={mapRef} style={{ height: '250px', background: '#eee', borderRadius: '8px', marginTop: '1rem', zIndex: 1 }}></div>
+                            <div id="contact-map" className="contact-map" ref={mapRef}></div>
                         </div>
 
                         <div className="contact-form-wrapper">
@@ -224,14 +224,14 @@ export default function Contact() {
             </section>
 
             {/* --- SECÇÃO NEWSLETTER COM VALIDAÇÃO --- */}
-            <section id="newsletter" className="eventos-section" style={{ backgroundColor: 'var(--color-off-white)', padding: '60px 0' }}> 
+            <section id="newsletter" className="newsletter-section"> 
                 <div className="container">
                     <header className="section-header">
                         <h2 className="section-title">Subscreva a nossa Newsletter</h2>
                         <p className="section-subtitle">Receba as últimas novidades sobre investigação e saúde.</p>
                     </header>
 
-                    <div className="newsletter-wrapper" style={{ maxWidth: '600px', margin: '0 auto' }}>
+                    <div className="newsletter-wrapper">
                         <form className="contact-form" onSubmit={handleSubmitNewsletter}> 
                             <div className="form-group">
                                 <div className="input-with-icon">
@@ -261,7 +261,7 @@ export default function Contact() {
                                 </div>
                                 {isNewsEmailValid === false && <span className="error-text">Use domínios @uac.pt, @gmail.com ou @outlook.com</span>}
                             </div>
-                            <button type="submit" className="btn submit-button" style={{ width: '100%', marginTop: '0.5rem' }}>Subscrever Agora</button>
+                            <button type="submit" className="btn submit-button newsletter-submit-btn">Subscrever Agora</button>
                         </form>
                     </div>
                 </div>
