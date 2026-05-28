@@ -28,15 +28,19 @@
 /* Mapa e Data */
 .evento-mapa-container {
     position: relative;
-    height: 180px;
+    height: 200px;
     width: 100%;
-    background: var(--color-light-gray);
+    background: #eee;
 }
 
 .evento-mapa {
     height: 100%;
     width: 100%;
     z-index: 1;
+}
+
+.evento-meteo-wrapper {
+    margin-top: 15px;  
 }
 
 .evento-mapa .leaflet-container {
@@ -150,6 +154,10 @@
     margin-top: auto;
 }
 
+.meteo-texto {
+    font-size: 0.9rem;
+}
+
 .weather-pill {
     background-color: var(--color-light-gray, #f8f9fa);
     border-radius: 12px;
@@ -211,6 +219,25 @@
     padding: 1rem;
     background-color: var(--color-light-gray);
     border-radius: 12px;
+}
+
+.eventos-empty {
+    text-align: center;
+    width: 100%;
+    grid-column: 1 / -1; 
+    padding: 2rem 0;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.eventos-status {
+    text-align: center;
+    grid-column: 1 / -1;
+    width: 100%;
 }
 
 /* Spinner */
