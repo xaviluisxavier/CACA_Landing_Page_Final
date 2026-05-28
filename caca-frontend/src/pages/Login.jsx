@@ -80,8 +80,7 @@ export default function Login() {
                         ENTRAR NO SISTEMA
                     </button>
                 </form>
-                
-                {/* O bloco que limpámos: */}
+
                 <div className="login-back-wrapper">
                     <Link to="/" className="login-back-link">
                         <i className="fi fi-rr-arrow-left"></i> Voltar ao site principal
