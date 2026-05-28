@@ -60,7 +60,7 @@ export default function ChartOportunidades() {
         grupoEixoX.selectAll(".tick line").remove();
         grupoEixoX.selectAll(".tick text").attr("fill", "var(--color-dark-gray)").attr("font-size", "13px").attr("font-weight", "700").attr("dy", "1.2em");
 
-        // Tooltip nativo (Criado de forma segura no React)
+        // Tooltip nativo
         let tooltip = d3.select("body").select(".chart-tooltip");
         if (tooltip.empty()) {
             tooltip = d3.select("body").append("div")
