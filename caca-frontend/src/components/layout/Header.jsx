@@ -1,3 +1,4 @@
+// src/components/layout/Header.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo3D from '../ui/logo-3d';
@@ -25,6 +26,7 @@ export default function Header() {
                         <li><a href="#oportunidades" onClick={() => setIsMenuOpen(false)}>Oportunidades</a></li>
                         <li><a href="#eventos" onClick={() => setIsMenuOpen(false)}>Eventos</a></li>
                         <li><a href="#noticias" onClick={() => setIsMenuOpen(false)}>Notícias</a></li>
+                        <li><a href="#contactos" onClick={() => setIsMenuOpen(false)}>Contacto</a></li>
                         <li><Link to="/admin" className="nav-admin-link">Área Reservada</Link></li>
                     </ul>
                 </nav>
