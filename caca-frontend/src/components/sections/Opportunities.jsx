@@ -32,8 +32,7 @@ export default function Opportunities() {
                         <p className="opportunity-description">Bolsas de investigação apoiando projetos de excelência em saúde e inovação biomédica.</p>
                     </article>
                 </div>
-                
-                {/* Injetar o Gráfico Aqui */}
+            
                 <ChartOportunidades/>
 
             </div>
